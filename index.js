@@ -17,12 +17,20 @@ const taskRoutes = require('./routes/tasks')
 const submissionRoutes = require('./routes/submissions')
 const paymentRoutes = require('./routes/payments')
 const withdrawalRoutes = require('./routes/withdrawals')
+const userRoutes = require('./routes/users')
+const notificationRoutes = require('./routes/notifications')
+const dashboardRoutes = require('./routes/dashboard')
+const uploadRoutes = require('./routes/upload')
 
 app.use('/api/auth', authRoutes)
 app.use('/api/tasks', taskRoutes)
 app.use('/api/submissions', submissionRoutes)
 app.use('/api/payments', paymentRoutes)
 app.use('/api/withdrawals', withdrawalRoutes)
+app.use('/api/users', userRoutes)
+app.use('/api/notifications', notificationRoutes)
+app.use('/api/dashboard', dashboardRoutes)
+app.use('/api/upload', uploadRoutes)
 
 async function start(){
   try{
